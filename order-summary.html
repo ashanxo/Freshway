@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshway | Order Summary</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+     <!-- Header Section -->
+   <header class="header">
+    <div class="name">
+        <h1 class="h1_1">Freshway <span class="span_1">Grocery</span></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="a_1" href="index.html">Home</a></li>
+            <li><a class="a_1" href="about_us_new.html">About Us</a></li>
+            <li><a class="a_1" href="dairy_new.html">Fresh Dairy</a></li>
+            <li class="dropdown">
+                <a class="a_1 dropbtn" href="#">Meat & Seafood</a>
+                <div class="dropdown-content">
+                    <a href="Meat.html">Fresh Meat</a>
+                    <a href="seafood.html">Fresh Seafood</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="a_1 dropbtn" href="#">Veggies & Fruits</a>
+                <div class="dropdown-content">
+                    <a href="vegetable_new.html">Fresh Veggies</a>
+                    <a href="Fruits.html">Fresh Fruits</a>
+                </div>
+            </li>
+            <li><a class="a_1" href="bakery.html">Bakery & Cooking</a></li>
+            <li><a class="a_1" href="cosmetic.html">Glow Skin</a></li>
+        </ul>
+    </nav>
+    <div class="cart">
+        <a href="javascript:void(0);" onclick="openCartModal()">
+            <img src="cart.png" width="25" height="25" alt="Cart">
+        </a>
+        <a href="Login.html">
+            <img src="person.png" width="25" height="25" alt="Register">
+        </a>
+    </div>
+</header>
+<!-- End of Header Section -->
+
+
+    <!-- Order Summary Section -->
+    <section id="order-summary">
+        <h1>Order Summary</h1>
+        
+        <!-- Display Order Summary Table -->
+        <div id="orderSummaryTableContainer">
+            <table id="orderSummaryTable" class="order-summary-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Unit</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Order items will be dynamically added here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total</td>
+                        <td id="orderTotalPrice"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <!-- Personal Details Form -->
+        <div class="form-section">
+            <h2>Personal Details</h2>
+            <form id="personalDetailsForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </form>
+        </div>
+        
+        <!-- Payment Details Form -->
+        <div class="form-section">
+            <h2>Payment Details</h2>
+            <form id="paymentForm">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" maxlength="19" required>
+                
+                <label for="expiryDate">Expiry Date (MM/YY):</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" required>
+                
+                <button type="submit">Submit Payment</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+</body>
+</html>

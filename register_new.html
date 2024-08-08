@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Freshway | Home</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="name">
+            <h1 class="h1_1">Freshway <span class="span_1">Grocery</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="a_1" href="index.html">Home</a></li>
+                <li><a class="a_1" href="about_us_new.html">About Us</a></li>
+                <li><a class="a_1" href="dairy_new.html">Fresh Dairy</a></li>
+                <li class="dropdown">
+                    <a class="a_1 dropbtn" href="#">Meat & Seafood</a>
+                    <div class="dropdown-content">
+                        <a href="Meat.html">Fresh Meat</a>
+                        <a href="seafood.html">Fresh Seafood</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="a_1 dropbtn" href="#">Veggies & Fruits</a>
+                    <div class="dropdown-content">
+                        <a href="vegetable_new.html">Fresh Veggies</a>
+                        <a href="Fruits.html">Fresh Fruits</a>
+                    </div>
+                </li>
+                <li><a class="a_1" href="bakery.html">Bakery & Cooking</a></li>
+                <li><a class="a_1" href="cosmetic.html">Glow Skin</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="javascript:void(0);" onclick="openCartModal()">
+                <img src="cart.png" width="25" height="25" alt="Cart">
+            </a>
+            <a href="Login.html">
+                <img src="person.png" width="25" height="25" alt="Register">
+            </a>
+        </div>
+    </header>
+    <!-- End of Header Section -->
+    
+ <!-- Section containing the registration form -->
+ <section class="form-container" id="register">
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+        <div class="input">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="input">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="input">
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="" disabled selected>Select a payment method</option>
+                <option value="visa_mastercard">Visa/Mastercard</option>
+                <option value="cash_on_delivery">Cash on Delivery</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="loyalty">Loyalty Scheme:</label>
+            <select id="loyalty" name="loyalty" required>
+                <option value="" disabled selected>Select a loyalty scheme</option>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+                <option value="platinum">Platinum</option>
+            </select>
+        </div>
+        <div class="input">
+            <button type="submit" class="register-button">Register</button>
+        </div>
+    </form>
+</section>
+
+<!-- Section containing the benefits of loyalty schemes -->
+<section class="benefits-container" id="benefits">
+    <h2>Loyalty Scheme Benefits</h2>
+    <div class="benefit">
+        <h3>Silver</h3>
+        <ul>
+            <li>5% discount on all purchases</li>
+            <li>Exclusive access to sales</li>
+            <li>Priority customer service</li>
+        </ul>
+    </div>
+    <div class="benefit">
+        <h3>Gold</h3>
+        <ul>
+            <li>10% discount on all purchases</li>
+            <li>Exclusive access to sales</li>
+            <li>Priority customer service</li>
+            <li>Free delivery on orders over 5000LKR</li>
+        </ul>
+    </div>
+    <div class="benefit">
+        <h3>Platinum</h3>
+        <ul>
+            <li>15% discount on all purchases</li>
+            <li>Exclusive access to sales</li>
+            <li>Priority customer service</li>
+            <li>Free delivery on all orders</li>
+            <li>Free gift packing</li>
+        </ul>
+    </div>
+</section>
+
+</body>
+
+<!-- Footer section containing about, quick links, and contact information -->
+<footer>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Freshway Sri Lanka is a proudly local supermarket family that strives to develop independently owned and operated food retail outlets under the Freshway banner.</p>
+                <div class="socials">
+                    <a target=”_blank” href="https://www.facebook.com/FreshwayGroceryMV?mibextid=LQQJ4d">Facebook</a>
+                    <a target=”_blank” href="https://www.instagram.com/freshway_grocery?igsh=MXZ5ZTI0aW8zam11Nw==">Instagram</a>
+                    <a target=”_blank” href="https://youtube.com/@freshwaymarket?si=e4rHDJGGRg098AhY" >You Tube</a>
+                </div>
+            </div>
+           
+            <div class="footer-section links">
+                <h3>Secret Recipes</h3>
+                <p>Need to know about secret recipes?
+                    <a target="_blank" href="https://topsecretrecipes.com/"><center>Click Here!</center></a></p>
+            </div>
+            
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Phone: (011) 2 453 000</li>
+                    <li>Email: info@freshway.lk</li>
+                    <li>Location: 25/2, Darley Road, Colombo, Sri Lanka</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Freshway Grocery. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</html>

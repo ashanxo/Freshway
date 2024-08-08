@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freshway | Meat and Seafood</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="name">
+            <h1 class="h1_1">Freshway <span class="span_1">Grocery</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="a_1" href="index.html">Home</a></li>
+                <li><a class="a_1" href="about_us_new.html">About Us</a></li>
+                <li><a class="a_1" href="dairy_new.html">Fresh Dairy</a></li>
+                <li class="dropdown">
+                    <a class="a_1 dropbtn" href="#">Meat & Seafood</a>
+                    <div class="dropdown-content">
+                        <a href="Meat.html">Fresh Meat</a>
+                        <a href="seafood.html">Fresh Seafood</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="a_1 dropbtn" href="#">Veggies & Fruits</a>
+                    <div class="dropdown-content">
+                        <a href="vegetable_new.html">Fresh Veggies</a>
+                        <a href="Fruits.html">Fresh Fruits</a>
+                    </div>
+                </li>
+                <li><a class="a_1" href="bakery.html">Bakery & Cooking</a></li>
+                <li><a class="a_1" href="cosmetic.html">Glow Skin</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="javascript:void(0);" onclick="openCartModal()">
+                <img src="cart.png" width="25" height="25" alt="Cart"/>
+            </a>
+            <a href="/html/Login.html">
+                <img src="person.png" width="25" height="25" alt="Register"/>
+            </a>
+        </div>
+    </header>
+    <!-- End of Header Section -->
+
+    <!-- Meat and Seafood Section -->
+    <section id="meat-seafood">
+        <h1>Our Fresh Seafood</h1>
+        <p><b><center>"Catch the Freshest Seafood at Our Grocery - Straight from the Sea to You!"</center></b></p>
+
+        <!-- Seafood Category -->
+        <div id="seafood" class="category-grid">
+            <div class="seafood-grid">
+                <div class="seafood-item">
+                    <img src="fish.png" alt="Fish">
+                    <h3>Fish</h3>
+                    <p>Good quality, Fresh Fish</p>
+                    <p>Price (1kg): LKR 1500</p>
+                    <div class="action-buttons">
+                        <button onclick="addToCart('Fish', 1500, 'kg')">Order Now</button>
+                        <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                    </div>
+                </div>
+                <div class="seafood-item">
+                    <img src="shrimp.png" alt="Shrimp">
+                    <h3>Shrimp</h3>
+                    <p>Good quality, Fresh Shrimp</p>
+                    <p>Price (1kg): LKR 2000</p>
+                    <div class="action-buttons">
+                        <button onclick="addToCart('Shrimp', 2000, 'kg')">Order Now</button>
+                        <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                    </div>
+                </div>
+                <div class="seafood-item">
+                    <img src="crab.png" alt="Crab">
+                    <h3>Crab</h3>
+                    <p>Good quality, Fresh Crab</p>
+                    <p>Price (1kg): LKR 1800</p>
+                    <div class="action-buttons">
+                        <button onclick="addToCart('Crab', 1800, 'kg')">Order Now</button>
+                        <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                    </div>
+                </div>
+                <div class="seafood-item">
+                    <img src="cuttlefish.png" alt="Cuttlefish">
+                    <h3>Cuttlefish</h3>
+                    <p>Good quality, Fresh Cuttlefish</p>
+                    <p>Price (1kg): LKR 1800</p>
+                    <div class="action-buttons">
+                        <button onclick="addToCart('Cuttlefish', 1800, 'kg')">Order Now</button>
+                        <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                    </div>
+                </div>
+                <div class="seafood-item">
+                    <img src="lobster.png" alt="Lobster">
+                    <h3>Lobster</h3>
+                    <p>Good quality, Fresh Lobster</p>
+                    <p>Price (1kg): LKR 3500</p>
+                    <div class="action-buttons">
+                        <button onclick="addToCart('Lobster', 3500, 'kg')">Order Now</button>
+                        <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                    </div>
+                </div>
+                <div class="seafood-item">
+                    <img src="octupus.png" alt="Octopus">
+                    <h3>Octopus</h3>
+                    <p>Good quality, Fresh Octopus</p>
+                    <p>Price (1kg): LKR 2500</p>
+                    <div class="action-buttons">
+                        <button onclick="addToCart('Octopus', 2500, 'kg')">Order Now</button>
+                        <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Meat and Seafood Section -->
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display:none;">
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <button onclick="closeCartModal()">Close</button>
+    </div>
+    <!-- End of Cart Modal -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <!-- About Us Section in Footer -->
+                <div class="footer-section about">
+                    <h3>About Us</h3>
+                    <p>Freshway Sri Lanka is a proudly local supermarket family that strives to develop independently owned and operated food retail outlets under the Freshway banner.</p>
+                    <div class="socials">
+                        <a target="_blank" href="https://www.facebook.com/FreshwayGroceryMV?mibextid=LQQJ4d">Facebook</a>
+                        <a target="_blank" href="https://www.instagram.com/freshway_grocery?igsh=MXZ5ZTI0aW8zam11Nw==">Instagram</a>
+                        <a target="_blank" href="https://youtube.com/@freshwaymarket?si=e4rHDJGGRg098AhY">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Secret Recipes</h3>
+                    <p>Need to know about secret recipes?
+                        <a target="_blank" href="https://topsecretrecipes.com/"><center>Click Here!</center></a></p>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Phone: (011) 2 453 000</li>
+                        <li>Email: info@freshway.lk</li>
+                        <li>Location: 25/2, Darley Road, Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Freshway Grocery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer Section -->
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshway | Checkout</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+   <header class="header">
+    <div class="name">
+        <h1 class="h1_1">Freshway <span class="span_1">Grocery</span></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="a_1" href="index.html">Home</a></li>
+            <li><a class="a_1" href="about_us_new.html">About Us</a></li>
+            <li><a class="a_1" href="dairy_new.html">Fresh Dairy</a></li>
+            <li class="dropdown">
+                <a class="a_1 dropbtn" href="#">Meat & Seafood</a>
+                <div class="dropdown-content">
+                    <a href="Meat.html">Fresh Meat</a>
+                    <a href="seafood.html">Fresh Seafood</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="a_1 dropbtn" href="#">Veggies & Fruits</a>
+                <div class="dropdown-content">
+                    <a href="vegetable_new.html">Fresh Veggies</a>
+                    <a href="Fruits.html">Fresh Fruits</a>
+                </div>
+            </li>
+            <li><a class="a_1" href="bakery.html">Bakery & Cooking</a></li>
+            <li><a class="a_1" href="cosmetic.html">Glow Skin</a></li>
+        </ul>
+    </nav>
+    <div class="cart">
+        <a href="javascript:void(0);" onclick="openCartModal()">
+            <img src="cart.png" width="25" height="25" alt="Cart">
+        </a>
+        <a href="Login.html">
+            <img src="person.png" width="25" height="25" alt="Register">
+        </a>
+    </div>
+</header>
+<!-- End of Header Section -->
+ 
+    <!-- Checkout Section -->
+    <section id="checkout">
+        <h1>Checkout</h1>
+        <table id="checkoutTable" class="checkout-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Unit</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"><b>TOTAL</b></td>
+                    <td id="totalPrice"></td>
+                </tr>
+            </tfoot>
+        </table>
+        <button onclick="addToFavoriteBill()">Save as Favorite</button>
+        <button onclick="proceedToOrderSummary()">Place Your Order Now</button>
+        <button onclick="proceedToFavoriteBills()">Go to Favorites</button>
+    </section>
+</body>
+</html>

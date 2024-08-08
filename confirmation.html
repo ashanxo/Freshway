@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success | Freshway</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="name">
+            <h1 class="h1_1">Freshway <span class="span_1">Grocery</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="a_1" href="index.html">Home</a></li>
+                <li><a class="a_1" href="about_us_new.html">About Us</a></li>
+                <li><a class="a_1" href="dairy_new.html">Fresh Dairy</a></li>
+                <li class="dropdown">
+                    <a class="a_1 dropbtn" href="#">Meat & Seafood</a>
+                    <div class="dropdown-content">
+                        <a href="Meat.html">Fresh Meat</a>
+                        <a href="seafood.html">Fresh Seafood</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="a_1 dropbtn" href="#">Veggies & Fruits</a>
+                    <div class="dropdown-content">
+                        <a href="vegetable_new.html">Fresh Veggies</a>
+                        <a href="Fruits.html">Fresh Fruits</a>
+                    </div>
+                </li>
+                <li><a class="a_1" href="bakery.html">Bakery & Cooking</a></li>
+                <li><a class="a_1" href="cosmetic.html">Glow Skin</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="javascript:void(0);" onclick="openCartModal()">
+                <img src="cart.png" width="25" height="25" alt="Cart">
+            </a>
+            <a href="Login.html">
+                <img src="person.png" width="25" height="25" alt="Register">
+            </a>
+        </div>
+    </header>
+    <!-- End of Header Section -->
+    
+
+    <section id="confirmation">
+        <h1>Order Confirmation</h1>
+        <p>✅ Successfully Order Placed</p>
+        <p>Thank you for your order! Your transaction was successful.</p>
+        <p>Your estimated delivery date is: <span id="deliveryDate"></span></p>
+    </section>
+    
+    <script>
+        // Calculate the estimated delivery date (assuming 3-5 days)
+        function calculateDeliveryDate() {
+            const today = new Date();
+            const deliveryDate = new Date(today);
+            deliveryDate.setDate(today.getDate() + Math.floor(Math.random() * 3) + 3); // 3 to 5 days
+            return deliveryDate.toDateString();
+        }
+
+        document.getElementById('deliveryDate').textContent = calculateDeliveryDate();
+    </script>
+</body>
+</html>

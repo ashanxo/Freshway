@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshway | Vegetables</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="name">
+            <h1 class="h1_1">Freshway <span class="span_1">Grocery</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="a_1" href="index.html">Home</a></li>
+                <li><a class="a_1" href="about_us_new.html">About Us</a></li>
+                <li><a class="a_1" href="dairy_new.html">Fresh Dairy</a></li>
+                <li class="dropdown">
+                    <a class="a_1 dropbtn" href="#">Meat & Seafood</a>
+                    <div class="dropdown-content">
+                        <a href="Meat.html">Fresh Meat</a>
+                        <a href="seafood.html">Fresh Seafood</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="a_1 dropbtn" href="#">Veggies & Fruits</a>
+                    <div class="dropdown-content">
+                        <a href="vegetable_new.html">Fresh Veggies</a>
+                        <a href="Fruits.html">Fresh Fruits</a>
+                    </div>
+                </li>
+                <li><a class="a_1" href="bakery.html">Bakery & Cooking</a></li>
+                <li><a class="a_1" href="cosmetic.html">Glow Skin</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="javascript:void(0);" onclick="openCartModal()">
+                <img src="cart.png" width="25" height="25" alt="Cart">
+            </a>
+            <a href="Login.html">
+                <img src="person.png" width="25" height="25" alt="Register">
+            </a>
+        </div>
+    </header>
+    <!-- End of Header Section -->
+    
+    <!-- Vegetables Section -->
+    <section id="vegetables">
+        <h1>Our Fresh Vegetables</h1>
+        <p><b><center>"Harvested for Health:  The Freshest Vegetables at Your Fingertips!"</center></b></p>
+        <div class="vegetable-grid">
+            <div class="vegetable">
+                <img src="beans.png" alt="Beans">
+                <h3>Beans</h3>
+                <p>Good quality, Fresh Beans</p>
+                <p>Price (1kg): LKR 500</p>
+                <div class="order">
+                    <button onclick="addToCart('Beans', 500, 'kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="vegetable">
+                <img src="carrot.png" alt="Carrot">
+                <h3>Carrot</h3>
+                <p>Good quality, Fresh Carrot</p>
+                <p>Price (1kg): LKR 1200</p>
+                <div class="order">
+                    <button onclick="addToCart('Carrot', 1200, 'kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="vegetable">
+                <img src="bellpepper.png" alt="Bell Peppers">
+                <h3>Bell Peppers</h3>
+                <p>Good quality, Fresh Peppers</p>
+                <p>Price (1kg): LKR 800</p>
+                <div class="order">
+                    <button onclick="addToCart('Bell Peppers', 800, 'kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="vegetable">
+                <img src="potatoes.png" alt="Potatoes">
+                <h3>Potatoes</h3>
+                <p>Good quality, Fresh Potatoes</p>
+                <p>Price (1kg): LKR 300</p>
+                <div class="order">
+                    <button onclick="addToCart('Potatoes', 300, 'kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="vegetable">
+                <img src="tomatoes.png" alt="Tomatoes">
+                <h3>Tomatoes</h3>
+                <p>Good quality, Fresh Tomatoes</p>
+                <p>Price (1kg): LKR 500</p>
+                <div class="order">
+                    <button onclick="addToCart('Tomatoes', 500, 'kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="vegetable">
+                <img src="spinach.png" alt="Spinach">
+                <h3>Spinach</h3>
+                <p>Good quality, Fresh Spinach</p>
+                <p>Price (1kg): LKR 400</p>
+                <div class="order">
+                    <button onclick="addToCart('Spinach', 400, 'kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Vegetables Section -->
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display:none;">
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <button onclick="closeCartModal()">Close</button>
+    </div>
+    <!-- End of Cart Modal -->
+
+    <!-- Main Suppliers Section -->
+    <section id="places">
+        <h1><b>Our Main Suppliers</b></h1>
+        <div class="place">
+            <h3><b>Nuwara-Eliya Farm</b></h3>
+            <p>Known for its cool climate, producing high-quality leafy greens and root vegetables.</p>
+        </div>
+        <div class="place">
+            <h3><b>Welimada Farm</b></h3>
+            <p>Famous for its rich soil, yielding an array of fresh, organic vegetables.</p>
+        </div>
+        <div class="place">
+            <h3><b>Bandarawela Farm</b></h3>
+            <p>Renowned for diverse vegetable production, emphasizing sustainable farming practices.</p>
+        </div>
+    </section>
+    <!-- End of Main Suppliers Section -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About Us</h3>
+                    <p>Freshway Sri Lanka is a proudly local supermarket family that strives to develop independently owned and operated food retail outlets under the Freshway banner.</p>
+                    <div class="socials">
+                        <a target="_blank" href="https://www.facebook.com/FreshwayGroceryMV?mibextid=LQQJ4d">Facebook</a>
+                        <a target="_blank" href="https://www.instagram.com/freshway_grocery?igsh=MXZ5ZTI0aW8zam11Nw==">Instagram</a>
+                        <a target="_blank" href="https://youtube.com/@freshwaymarket?si=e4rHDJGGRg098AhY">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Secret Recipes</h3>
+                    <p>Need to know about secret recipes?
+                        <a target="_blank" href="https://topsecretrecipes.com/"><center>Click Here!</center></a></p>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Phone: (011) 2 453 000</li>
+                        <li>Email: info@freshway.lk</li>
+                        <li>Location: 25/2, Darley Road, Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Freshway Grocery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer Section -->
+
+</body>
+</html>

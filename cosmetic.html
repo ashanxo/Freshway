@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshway | Cosmetics</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+   <!-- Header Section -->
+   <header class="header">
+    <div class="name">
+        <h1 class="h1_1">Freshway <span class="span_1">Grocery</span></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="a_1" href="index.html">Home</a></li>
+            <li><a class="a_1" href="about_us_new.html">About Us</a></li>
+            <li><a class="a_1" href="dairy_new.html">Fresh Dairy</a></li>
+            <li class="dropdown">
+                <a class="a_1 dropbtn" href="#">Meat & Seafood</a>
+                <div class="dropdown-content">
+                    <a href="Meat.html">Fresh Meat</a>
+                    <a href="seafood.html">Fresh Seafood</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="a_1 dropbtn" href="#">Veggies & Fruits</a>
+                <div class="dropdown-content">
+                    <a href="vegetable_new.html">Fresh Veggies</a>
+                    <a href="Fruits.html">Fresh Fruits</a>
+                </div>
+            </li>
+            <li><a class="a_1" href="bakery.html">Bakery & Cooking</a></li>
+            <li><a class="a_1" href="cosmetic.html">Glow Skin</a></li>
+        </ul>
+    </nav>
+    <div class="cart">
+        <a href="javascript:void(0);" onclick="openCartModal()">
+            <img src="cart.png" width="25" height="25" alt="Cart">
+        </a>
+        <a href="Login.html">
+            <img src="person.png" width="25" height="25" alt="Register">
+        </a>
+    </div>
+</header>
+<!-- End of Header Section -->
+ 
+   <!-- Cosmetics Section -->
+<section id="cosmetics">
+    <h2>Our Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Product Image</th>
+                <th>Price</th>
+                <th>Order</th>
+                <th>Favorite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Dove Beauty Bar</b></td>
+                <td>Moisturizing soap bar that gently cleanses and nourishes the skin.</td>
+                <td><img class="table_image" src="dove.png" alt="Dove Beauty Bar"></td>
+                <td>LKR 500</td>
+                <td><button class="cbutton" data-name="Dove Beauty Bar" data-price="500" onclick="addToCart('Dove Beauty Bar', 500, 'bar')">Order Now</button></td>
+                <td><a href="favorites.html"><button class="fvbutton">❤️</button></a></td>
+            </tr>
+            <tr>
+                <td><b>Vaseline Lip Therapy</b></td>
+                <td>Lip balm that helps heal dry lips and provides a natural, glossy finish.</td>
+                <td><img class="table_image" src="vaseline.png" alt="Vaseline Lip Therapy"></td>
+                <td>LKR 700</td>
+                <td><button class="cbutton" data-name="Vaseline Lip Therapy" data-price="700" onclick="addToCart('Vaseline Lip Therapy', 700, 'lip balm')">Order Now</button></td>
+                <td><a href="favorites.html"><button class="fvbutton">❤️</button></a></td>
+            </tr>
+            <tr>
+                <td><b>Pantene Pro-V Shampoo</b></td>
+                <td>Strengthening shampoo that repairs damaged hair and adds shine.</td>
+                <td><img class="table_image" src="pantene.png" alt="Pantene Pro-V Shampoo"></td>
+                <td>LKR 1300</td>
+                <td><button class="cbutton" data-name="Pantene Pro-V Shampoo" data-price="1300" onclick="addToCart('Pantene Pro-V Shampoo', 1300, 'shampoo')">Order Now</button></td>
+                <td><a href="favorites.html"><button class="fvbutton">❤️</button></a></td>
+            </tr>
+            <tr>
+                <td><b>Olay Regenerist Face Cream</b></td>
+                <td>Anti-aging face cream that hydrates and improves skin elasticity.</td>
+                <td><img class="table_image" src="olay.png" alt="Olay Regenerist Face Cream"></td>
+                <td>LKR 1400</td>
+                <td><button class="cbutton" data-name="Olay Regenerist Face Cream" data-price="1400" onclick="addToCart('Olay Regenerist Face Cream', 1400, 'face cream')">Order Now</button></td>
+                <td><a href="favorites.html"><button class="fvbutton">❤️</button></a></td>
+            </tr>
+            <tr>
+                <td><b>Elysian Essence Perfume</b></td>
+                <td>A timeless fragrance blending floral notes with a hint of musk.</td>
+                <td><img class="table_image" src="perfume.png" alt="Elysian Essence Perfume"></td>
+                <td>LKR 1500</td>
+                <td><button class="cbutton" data-name="Elysian Essence Perfume" data-price="1500" onclick="addToCart('Elysian Essence Perfume', 1500, 'perfume')">Order Now</button></td>
+                <td><a href="favorites.html"><button class="fvbutton">❤️</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<!-- End of Cosmetics Section -->
+
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display:none;">
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <button onclick="closeCartModal()">Close</button>
+    </div>
+    <!-- End of Cart Modal -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About Us</h3>
+                    <p>Freshway Sri Lanka is a proudly local supermarket family that strives to develop independently owned and operated food retail outlets under the Freshway banner.</p>
+                    <div class="socials">
+                        <a target="_blank" href="https://www.facebook.com/FreshwayGroceryMV?mibextid=LQQJ4d">Facebook</a>
+                        <a target="_blank" href="https://www.instagram.com/freshway_grocery?igsh=MXZ5ZTI0aW8zam11Nw==">Instagram</a>
+                        <a target="_blank" href="https://youtube.com/@freshwaymarket?si=e4rHDJGGRg098AhY">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Secret Recipes</h3>
+                    <p>Need to know about secret recipes?
+                        <a target="_blank" href="https://topsecretrecipes.com/"><center>Click Here!</center></a></p>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Phone: (011) 2 453 000</li>
+                        <li>Email: info@freshway.lk</li>
+                        <li>Location: 25/2, Darley Road, Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Freshway Grocery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer Section -->
+
+</body>
+
+</html>

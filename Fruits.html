@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshway | Fresh Fruits</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+     <!-- Header Section -->
+   <header class="header">
+    <div class="name">
+        <h1 class="h1_1">Freshway <span class="span_1">Grocery</span></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a class="a_1" href="index.html">Home</a></li>
+            <li><a class="a_1" href="about_us_new.html">About Us</a></li>
+            <li><a class="a_1" href="dairy_new.html">Fresh Dairy</a></li>
+            <li class="dropdown">
+                <a class="a_1 dropbtn" href="#">Meat & Seafood</a>
+                <div class="dropdown-content">
+                    <a href="Meat.html">Fresh Meat</a>
+                    <a href="seafood.html">Fresh Seafood</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="a_1 dropbtn" href="#">Veggies & Fruits</a>
+                <div class="dropdown-content">
+                    <a href="vegetable_new.html">Fresh Veggies</a>
+                    <a href="Fruits.html">Fresh Fruits</a>
+                </div>
+            </li>
+            <li><a class="a_1" href="bakery.html">Bakery & Cooking</a></li>
+            <li><a class="a_1" href="cosmetic.html">Glow Skin</a></li>
+        </ul>
+    </nav>
+    <div class="cart">
+        <a href="javascript:void(0);" onclick="openCartModal()">
+            <img src="cart.png" width="25" height="25" alt="Cart">
+        </a>
+        <a href="Login.html">
+            <img src="person.png" width="25" height="25" alt="Register">
+        </a>
+    </div>
+</header>
+<!-- End of Header Section -->
+
+
+    <!-- Fruits Section -->
+    <section id="fruits">
+        <h1>Our Fresh Fruits</h1>
+        <p><b><center>"Savor the Sweetness: Fresh, Juicy Fruits Handpicked for You!"</center></b></p>
+        <div class="fruit-grid">
+            <div class="fruit">
+                <img src="apple.png" alt="Apple">
+                <h3>Apple</h3>
+                <p>Good quality, Fresh fruits</p>
+                <p>Price (1kg): LKR 1000</p>
+                <div class="action-buttons">
+                    <button class="order-button" onclick="addToCart('Apple', 1000, '1kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="fruit">
+                <img src="banana.png" alt="Banana">
+                <h3>Banana</h3>
+                <p>Good quality, Fresh fruits</p>
+                <p>Price (1kg): LKR 200</p>
+                <div class="action-buttons">
+                    <button class="order-button" onclick="addToCart('Banana', 200, '1kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="fruit">
+                <img src="grapes.png" alt="Grapes">
+                <h3>Grapes</h3>
+                <p>Good quality, Fresh fruits</p>
+                <p>Price (1kg): LKR 1500</p>
+                <div class="action-buttons">
+                    <button class="order-button" onclick="addToCart('Grapes', 1500, '1kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="fruit">
+                <img src="orange.png" alt="Orange">
+                <h3>Orange</h3>
+                <p>Good quality, Fresh fruits</p>
+                <p>Price (1kg): LKR 1200</p>
+                <div class="action-buttons">
+                    <button class="order-button" onclick="addToCart('Orange', 1200, '1kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="fruit">
+                <img src="mango.png" alt="Mango">
+                <h3>Mango</h3>
+                <p>Good quality, Fresh fruits</p>
+                <p>Price (1kg): LKR 800</p>
+                <div class="action-buttons">
+                    <button class="order-button" onclick="addToCart('Mango', 800, '1kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+            <div class="fruit">
+                <img src="pineapple.png" alt="Pineapple">
+                <h3>Pineapple</h3>
+                <p>Good quality, Fresh fruits</p>
+                <p>Price (1kg): LKR 900</p>
+                <div class="action-buttons">
+                    <button class="order-button" onclick="addToCart('Pineapple', 900, '1kg')">Order Now</button>
+                    <span class="favorite-icon" onclick="window.location.href='favorites.html'">❤️</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Fruits Section -->
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display:none;">
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <button onclick="closeCartModal()">Close</button>
+    </div>
+    <!-- End of Cart Modal -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <!-- About Us Section in Footer -->
+                <div class="footer-section about">
+                    <h3>About Us</h3>
+                    <p>Freshway Sri Lanka is a proudly local supermarket family that strives to develop independently owned and operated food retail outlets under the Freshway banner.</p>
+                    <div class="socials">
+                        <a target="_blank" href="https://www.facebook.com/FreshwayGroceryMV?mibextid=LQQJ4d">Facebook</a>
+                        <a target="_blank" href="https://www.instagram.com/freshway_grocery?igsh=MXZ5ZTI0aW8zam11Nw==">Instagram</a>
+                        <a target="_blank" href="https://youtube.com/@freshwaymarket?si=e4rHDJGGRg098AhY">YouTube</a>
+                    </div>
+                </div>
+                <!-- Secret Recipes Section in Footer -->
+                <div class="footer-section links">
+                    <h3>Secret Recipes</h3>
+                    <p>Need to know about secret recipes?
+                        <a target="_blank" href="https://topsecretrecipes.com/"><center>Click Here!</center></a></p>
+                </div>
+                <!-- Contact Us Section in Footer -->
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Phone: (011) 2 453 000</li>
+                        <li>Email: info@freshway.lk</li>
+                        <li>Location: 25/2, Darley Road, Colombo, Sri Lanka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Freshway Grocery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer Section -->
+
+</body>
+</html>
